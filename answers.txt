@@ -1,0 +1,281 @@
+1.
+
+ls
+help
+mkdir test_folder
+cd test_folder/
+touch index.html
+mkdir styles
+cd styles/ 
+touch styles.css
+touch script.js
+touch bags.txt
+ls -la
+echo Excellent
+mkdir public 
+mkdir nonpublic 
+mv bags.txt nonpublic/
+ls
+cd ~ 
+cd ..
+ls 
+cd src
+ls
+mv images/ ../icons 
+cd .. 
+ls
+mv icons/ root/test_folder/styles/icons  
+cd root/test_folder/styles/icons
+ls
+rm -rf *.png 
+ls
+mv loading.gif new_loading.gif
+cp new_loading.gif ../ 
+cd ..
+rm -rf icons/ 
+echo Happy!
+history
+
+// how it was done:
+
+    1  ls                                                           
+    2  ls                                                            
+    3  help                                                          
+    4  touch                                                         
+    5  mkdir test_folder                                             
+    6  ls  
+    7  cd test_folder/                                               
+    8  touch index.html                                              
+    9  ls                                                            
+   10  mkdir styles                                                  
+   11  cd styles/                                                    
+   12  touch styles.css                                              
+   13  touch script.js                                               
+   14  touch bags.txt                                                
+   15  ls -la                                                        
+   16  cd..                                                          
+   17  cd.                                                           
+   18  cd..                                                          
+   19  ls                                                            
+   20  cd..                                                          
+   21  cd test_folder                                                
+   22  cd..                                                          
+   23  echo Excellent                                                
+   24  cd..                                                          
+   25  cd test_folder/                                               
+   26  cd test_folder                                                
+   27  ls -la                                                        
+   28  ..                                                            
+   29  .                                                             
+   30  mkdir public                                                  
+   31  mkdir nonpublic 
+   32  mv bags.txt nonpublic/                                        
+   33  ls                                                            
+   34  cd ~                                                          
+   35  ls-la                                                         
+   36  ls                                                            
+   37  cd ..                                                         
+   38  ls                                                            
+   39  cd test_folder                                                
+   40  cd log/                                                       
+   41  ls                                                            
+   42  cd ..                                                         
+   43  cd src                                                        
+   44  ls                                                            
+   45  cd ..                                                         
+   46  cd mysql/                                                     
+   47  ls                                                            
+   48  cd ..                                                         
+   49  ls                                                            
+   50  cd root/                                                      
+   51  ls     
+   52  cd ..                                                         
+   53  ls                                                            
+   54  cd src/                                                       
+   55  ls                                                            
+   56  cp images/ root/test_folder/icons                             
+   57  cd root/test_folder/icons                                     
+   58  cd root                                                       
+   59  cd ..                                                         
+   60  cd root/test_folder/icons                                     
+   61  cd root                                                       
+   62  cd test_folder/                                               
+   63  cd icons                                                      
+   64  ls                                                            
+   65  cd ~                                                          
+   66  cd ..                                                         
+   67  ls                                                            
+   68  cd src/                                                       
+   69  ls                                                            
+   70  cp images/ root/test_folder/                                  
+   71  cp images/ root/test_folder/styles                            
+   72  cp themes ../                                                 
+   73  cp themes/ ../                                                
+   74  cd..                                                          
+   75  cd ..                                                         
+   76  ls                                                            
+   77  cd src/ 
+   77  cd src/                                                       
+   78  ls                                                            
+   79  mv images/ ../icons                                           
+   80  cd ..                                                         
+   81  ls                                                            
+   82  mv icons/ root/test_folder/styles/icons                       
+   83  cd root/test_folder/styles/icons                              
+   84  ls                                                            
+   85  rm -rf *.png                                                  
+   86  ls                                                            
+   87  cd open favicon.ico                                           
+   88  open loading.gif                                              
+   89  mv favicon.ico logo.ico'                                      
+   90  mv favicon.ico logo.ico                                       
+   91  mv loading.gif new_loading.gif                                
+   92  ls                                                            
+   93  cp new_loading.gif ../                                        
+   94  ls                                                            
+   95  cd ..                                                         
+   96  ls                                                            
+   97  rm icons/                                                     
+   98  rm -rf icons/                                                 
+   99  echo Happy)                                                   
+  100  echo Happy!                                                   
+  101  history        
+
+
+
+2.
+
+ln -s test_folder/ test
+
+// soft link for folder test_folder
+
+ln test.txt test_link.txt 
+
+// hard link for test.txt file
+// how it was done:
+
+    1  ls                                                           
+    2  mkdir                                                        
+    3  mkdir test_folder                                            
+    4  ln test_folder test                                          
+    5  дln -s test_folder/ test                                     
+    6    n -s test_folder/ test                                     
+    7  ln -s test_folder/ test                                      
+    8  ls                                                           
+    9  cd test_folder/                                              
+   10  touch test.txt                                               
+   11  ln test.txt test_link.txt                                    
+   12  ls                                                           
+   13  history
+
+3. 
+
+bash-4.3$ alias say="echo"                                          
+bash-4.3$ say nice!                                                 
+nice! 
+
+//for findtxt:
+
+bash-4.3$ alias findtxt="find . -name "*.txt""                      
+bash-4.3$ findtxt                                                   
+./README.txt  
+
+4.
+
+history | wc -l
+
+// it will print number of commands, for example:
+
+bash-4.3$ ls                                                        
+README.txt                                                          
+bash-4.3$ ls-la                                                     
+bash: ls-la: command not found                                      
+bash-4.3$ history                                                   
+    1  ls                                                           
+    2  ls-la                                                        
+    3  history                                                      
+bash-4.3$ history | wc -l                                           
+4 
+
+5.
+
+ls > my_folder
+
+ls >> my_folder
+
+ls *txt > txt_files
+
+sort < my_folder
+
+sort < README.txt > new_README.txt
+
+6.
+find src/images/ -iname "*logo*"
+//will all the files with name "logo"
+
+find ! -name "*.txt" 
+//will all not .txt format files in current directory
+
+find images/ -name "*.png*" 
+//will show all files with ".png" format in images folder
+
+find log/ -type d
+//this will show all directories in "log" folder
+
+find log/ -type f 
+//this will show all files in "log" folder
+
+grep "Command" README.txt
+//Will find all lines with word "Command" 
+
+grep "N...r" README.txt
+//Will find all lines with words containing letters "N" & "r" //and anyone combination of letters at dot places
+
+history | grep "ls"
+//First history will look for all commands we have written //before and than will give results for grep. It will find all //the lines with "ls" element
+
+grep "tea" *.txt
+//This grep will show all lines containing word tea in //anyone .txt document
+
+grep -v "Java" README.txt
+//It will show all lines of README document, that don't contain the word "Java" 
+
+sed "s/hate/love/g" Changeworld.txt
+// It will change all words "hate" to "love"
+
+sed "s/:lower:/:upper:/g" small.txt
+// all letters will become upper
+
+sed "s/firstletter/Firstletter/" some.txt
+// Will change word but only one first word in that document
+
+sort phone_book 
+// will sort all elements in alphabet order
+
+sort -r phone_book
+// will sort all elements in reverse order
+
+log/* | sort -n
+// will sort all files in folder according to their file size
+
+7. 
+
+yes
+Якщо ми введемо команду без додаткових елементів коду, вона безкінечно буде повторювати "y" в нашому comandline (2 рази так запустив=)). Сама команда використовується в основному в конвеєрах, щоб передати введене значення у наступний едемент конвеєра без додатковго повторення. Напр.:
+
+yes "I know what you have done last summer !"
+повторює багато разів
+
+yes | rm -rf .*
+щоб видалити усі файли 
+
+yes Help me !!!
+Просто повторити багато разів
+
+yes qwerty | passwd
+щоб ввести пароль багато разів
+
+yes yes yes 
+// для особливої нагрузки на комп
+
+
